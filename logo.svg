@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="100%" stop-color="#16213e" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4cc9f0" />
+      <stop offset="50%" stop-color="#4361ee" />
+      <stop offset="100%" stop-color="#3a0ca3" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" height="300%" width="300%" x="-100%" y="-100%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGradient)" />
+  
+  <!-- Futuristic circuit lines -->
+  <g stroke="#4361ee" stroke-width="1.5" stroke-opacity="0.3">
+    <path d="M50,150 L250,150" />
+    <path d="M550,150 L750,150" />
+    <path d="M250,150 L250,50" />
+    <path d="M550,150 L550,50" />
+    <path d="M250,50 L550,50" />
+    
+    <path d="M250,150 L250,250" />
+    <path d="M550,150 L550,250" />
+    <path d="M250,250 L550,250" />
+    
+    <!-- Circuit nodes -->
+    <circle cx="250" cy="150" r="5" fill="#4cc9f0" />
+    <circle cx="550" cy="150" r="5" fill="#4cc9f0" />
+    <circle cx="250" cy="50" r="5" fill="#4cc9f0" />
+    <circle cx="550" cy="50" r="5" fill="#4cc9f0" />
+    <circle cx="250" cy="250" r="5" fill="#4cc9f0" />
+    <circle cx="550" cy="250" r="5" fill="#4cc9f0" />
+  </g>
+  
+  <!-- Main logo shape (stylized hexagon representing git) -->
+  <polygon 
+    points="400,75 475,125 475,175 400,225 325,175 325,125" 
+    fill="none" 
+    stroke="url(#textGradient)" 
+    stroke-width="8"
+    filter="url(#glow)" />
+  
+  <!-- Connecting branches representing simple git branches -->
+  <line x1="325" y1="125" x2="275" y2="100" stroke="#4cc9f0" stroke-width="4" />
+  <line x1="475" y1="125" x2="525" y2="100" stroke="#4cc9f0" stroke-width="4" />
+  <line x1="400" y1="225" x2="400" y2="260" stroke="#4cc9f0" stroke-width="4" />
+  
+  <!-- Small node circles -->
+  <circle cx="275" cy="100" r="8" fill="#4cc9f0" />
+  <circle cx="525" cy="100" r="8" fill="#4cc9f0" />
+  <circle cx="400" cy="260" r="8" fill="#4cc9f0" />
+  
+  <!-- Text "ezgit" inside the hexagon -->
+  <text 
+    x="400" 
+    y="150" 
+    font-family="Arial, sans-serif" 
+    font-weight="bold" 
+    font-size="45" 
+    text-anchor="middle" 
+    fill="url(#textGradient)" 
+    filter="url(#glow)">ezgit</text>
+  
+  <!-- Tagline inside the hexagon -->
+  <text 
+    x="400" 
+    y="175" 
+    font-family="Arial, sans-serif" 
+    font-size="16" 
+    text-anchor="middle" 
+    fill="#ffffff">git for humans</text>
+</svg>
