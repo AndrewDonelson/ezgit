@@ -1,7 +1,3 @@
-module github.com/yourusername/ezgit
+module github.com/AndrewDonelson/ezgit
 
 go 1.21
-
-require (
-	// Dependencies will be added here
-)
